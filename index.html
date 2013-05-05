@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/fluent.bootstrap.js"></script>
+</head>
+<body>
+<div>
+fluent.bootstrap.js
+</div>
+<div id="fluent-test"></div>
+<script>
+	var fb = fluentBoot('#fluent-test')
+		.toolbar()
+		.btnGroup()
+		.button(
+			{
+				caption: 'button 1',
+				kind: 'primary',
+				icon: 'search',
+				iconColor: 'white'
+			})
+		.on('click', function() { alert(' on click'); })
+		.button(
+			{
+				caption: 'button 2'
+			})
+		.add();
+	console.log(fb.context.selector);
+</script>
+</body>
+</html>
